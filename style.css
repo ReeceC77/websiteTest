@@ -1,13 +1,16 @@
+Thank you for providing the example of the HTML for the other page (documents.html). Given this, I'll refine the CSS to ensure the gradient animation resets correctly on each page load, regardless of navigation.
+
+We need to make sure that when navigating to a new page, the gradient animation starts correctly without accumulating the previous animation states from other pages. I'll adjust the CSS to handle this situation:
+
 body {
   font-family: 'Fira Code', monospace;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   text-align: center;
-  background: linear-gradient(to bottom, #F5F5F5, #1E88E5);
+  background: linear-gradient(to bottom, #009688, #303F9F);
   background-size: 400% 400%;
-  animation: gradientAnimation 30s ease infinite; /* Adjusted the duration to 30 seconds */
-  animation-play-state: running; /* Ensure animation starts correctly on load */
+  animation: gradientAnimation 30s ease infinite;
 }
 
 nav {
@@ -68,6 +71,6 @@ a:hover {
 }
 
 /* Ensure animation resets when page changes */
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
   document.body.style.animation = "gradientAnimation 30s ease infinite";
-}
+});
