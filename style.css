@@ -39,6 +39,7 @@ h1 {
   width: 45%;
   max-width: 500px;
   max-height: 350px;
+  min-height: 350px;
   height: 100%; /* Sets the height to match the other image's height */
   object-fit: cover; /* Maintains aspect ratio by scaling down */
   object-position: center; /* Center the image within the container */
