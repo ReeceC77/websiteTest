@@ -5,34 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real-time Reading</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Fira Code', monospace;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: linear-gradient(to bottom, #F5F5F5, #1E88E5);
-      background-size: 400% 400%;
-      animation: gradientAnimation 30s ease infinite;
-    }
-  </style>
 </head>
-<body onload="setGradientPosition()">
+<body>
   <nav>
     <a href="index.html">Home</a>
     <a href="reading.html">Real-time Reading</a>
     <a href="documents.html">Documents</a>
   </nav>
-  <h1>Real-time Reading</h1>
-  <ul>
-    <li><a href="docs/week1.pdf" target="_blank">Week 1 Report</a></li>
-    <li><a href="docs/project.pdf" target="_blank">Research Project</a></li>
-  </ul>
+  <h1>Live Data</h1>
+  <div id="data">Loading...</div>
+  <script src="script.js"></script>
 </body>
-<script>
-  function setGradientPosition() {
-    document.body.style.backgroundPosition = '0% 50%';
-  }
-</script>
 </html>
