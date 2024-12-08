@@ -18,7 +18,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="setGradientPosition()">
   <nav>
     <a href="index.html">Home</a>
     <a href="reading.html">Real-time Reading</a>
@@ -30,4 +30,9 @@
     <li><a href="docs/project.pdf" target="_blank">Research Project</a></li>
   </ul>
 </body>
+<script>
+  function setGradientPosition() {
+    document.body.style.backgroundPosition = '0% 100%';
+  }
+</script>
 </html>
