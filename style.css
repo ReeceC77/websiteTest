@@ -41,8 +41,8 @@ h1 {
 .image-container img {
   width: 45%;
   max-width: 500px;
-  max-height: 300px; /* Set the maximum height */
-  min-height: 200px; /* Set the minimum height */
+  max-height: 350px; /* Set the maximum height */
+  min-height: 350px; /* Set the minimum height */
   height: 300px; /* Set the actual height to ensure consistency */
   object-fit: cover; /* Maintains aspect ratio by scaling down */
   object-position: center; /* Center the image within the container */
