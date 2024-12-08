@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
 
 nav {
@@ -38,12 +41,19 @@ h1 {
 .image-container img {
   width: 45%;
   max-width: 500px;
-  max-height: 350px;
-  min-height: 350px;
-  height: 100%; /* Sets the height to match the other image's height */
+  max-height: 300px; /* Set the maximum height */
+  min-height: 200px; /* Set the minimum height */
+  height: 300px; /* Set the actual height to ensure consistency */
   object-fit: cover; /* Maintains aspect ratio by scaling down */
   object-position: center; /* Center the image within the container */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0 20px; /* Add space between the images */
+}
+
+/* Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
