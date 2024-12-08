@@ -6,7 +6,7 @@ body {
   text-align: center;
   background: linear-gradient(to top, #009688, #303F9F);
   background-size: 400% 400%;
-  animation: gradientAnimation 60s ease infinite;
+  animation: gradientAnimation 30s ease infinite;
 }
 
 nav {
