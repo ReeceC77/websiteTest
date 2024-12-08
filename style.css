@@ -4,19 +4,29 @@ body {
   margin: 0;
   padding: 0;
 }
+
 nav {
   background: #333;
   color: #fff;
   padding: 10px;
+  text-align: center;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
-  margin-right: 15px;
+  margin: 0 10px;
 }
-nav a:hover {
-  text-decoration: underline;
+
+.image-container {
+  text-align: center;
+  padding: 20px;
 }
-h1 {
-  color: #333;
+
+.image-container img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
