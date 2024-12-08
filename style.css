@@ -3,6 +3,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 nav {
@@ -18,15 +19,27 @@ nav a {
   margin: 0 10px;
 }
 
-.image-container {
+.content {
   text-align: center;
   padding: 20px;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
 .image-container img {
-  width: 50%;
+  width: 45%;
   max-width: 500px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 20px; /* Add space between the images */
 }
