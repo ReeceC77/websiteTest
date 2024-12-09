@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault(); // Prevent default link behavior
-      const url = link.getAttribute('data-url');
+      const url = link.getAttribute('href'); // Use 'href' instead of 'data-url' for simplicity
 
       // Check if the URL is already loaded and visible
       if (contentContainer.querySelector('iframe')?.getAttribute('src') !== url) {
