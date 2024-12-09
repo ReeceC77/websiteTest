@@ -59,3 +59,31 @@ h1 {
   100% { background-position: 0% 25%; }
 }
 
+/* Styling for weather information */
+#data {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#data p {
+  margin: 5px 0;
+}
+
+#data p.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+#data p.weather-detail {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
