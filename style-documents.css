@@ -40,7 +40,7 @@ h1 {
   display: inline-block; /* Fit content size */
   max-width: 90%; /* Prevent it from stretching too much */
   margin: 20px auto; /* Center the container */
-  text-align: center; /* Align text inside the container */
+  text-align: left; /* Align text inside the container */
   color: #fff; /* Ensure text stands out */
 }
 
