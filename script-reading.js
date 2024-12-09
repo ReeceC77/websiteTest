@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
       
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
       const data = await response.json();
       dataDiv.innerHTML = `Temperature in ${data.location.name}: ${data.current.temp_c}°C`;
     } catch (err) {
-      dataDiv.innerHTML = "Error fetching data.";
       console.error(err);
+      dataDiv.innerHTML = "Error fetching data. Please try again later.";
     }
   };
 
