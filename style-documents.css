@@ -58,8 +58,3 @@ h1 {
   50% { background-position: 0% 0%; }
   100% { background-position: 0% 50%; }
 }
-
-/* Ensure animation resets when page changes */
-document.addEventListener("DOMContentLoaded", function() {
-  document.body.style.animation = "gradientAnimation 30s ease infinite";
-});
