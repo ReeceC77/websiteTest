@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fetchWeatherData = async () => {
     try {
       const apiKey = "5ab9d4fb56af096ec97723caa6ec9c5a";
-      const city = "Cumberland";
+      const city = "London";
       const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
       
       if (!response.ok) {
