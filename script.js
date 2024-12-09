@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   links.forEach(link => {
     link.addEventListener('click', (event) => {
-      event.preventDefault();
+      event.preventDefault(); // Prevent default link behavior
       const url = link.getAttribute('data-url');
 
       // Check if the URL is already loaded and visible
