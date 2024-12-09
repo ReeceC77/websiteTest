@@ -42,9 +42,9 @@ h1 {
 .image-link {
   display: inline-block; /* Ensure the anchor and image are inline */
   margin: 0 20px; /* Add space between the images */
-  transition: transform 0.3s ease; /* Smooth transform effect */
 }
 
+/* Image styles */
 .image-link img {
   width: 45%;
   max-width: 500px;
@@ -55,10 +55,11 @@ h1 {
   object-position: center; /* Center the image within the container */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Smooth transform effect */
 }
 
 /* Hover effect for the images */
-.image-link:hover {
+.image-link:hover img {
   transform: scale(1.05); /* Slightly larger when hovered */
 }
 
