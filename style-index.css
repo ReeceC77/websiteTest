@@ -48,6 +48,7 @@ h1 {
 .image-link img {
   width: 45%;
   max-width: 500px;
+  min-width: 500px;
   max-height: 350px; /* Set the maximum height */
   min-height: 350px; /* Set the minimum height */
   height: 300px; /* Set the actual height to ensure consistency */
