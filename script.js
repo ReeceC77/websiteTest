@@ -18,12 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear the current content
     contentContainer.innerHTML = '';
 
-    // Load the document in an iframe
-    const iframe = document.createElement('iframe');
-    iframe.src = url;
-    iframe.style.width = '100%';
-    iframe.style.height = '500px'; // Adjust as needed
-    iframe.style.border = 'none';
-    contentContainer.appendChild(iframe);
+    // Embed the PDF using PDFObject
+    PDFObject.embed(url, contentContainer, {
+      height: '500px', // Adjust the height as needed
+      width: '100%' // Full width
+    });
   }
 });
