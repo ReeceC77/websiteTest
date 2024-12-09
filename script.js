@@ -4,24 +4,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   links.forEach(link => {
     link.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behavior
-      const url = link.getAttribute('href'); // Use 'href' instead of 'data-url' for simplicity
+      event.preventDefault(); // Default behavior is to block link navigation
 
       // Check if the URL is already loaded and visible
+      const url = link.getAttribute('data-url');
       if (contentContainer.querySelector('iframe')?.getAttribute('src') !== url) {
         loadDocument(url);
       }
     });
   });
 
+  // Function to load the document in an iframe
   function loadDocument(url) {
     // Clear the current content
     contentContainer.innerHTML = '';
 
-    // Embed the PDF using PDFObject
-    PDFObject.embed(url, contentContainer, {
-      height: '500px', // Adjust the height as needed
-      width: '100%' // Full width
-    });
+    // Load the document in an iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.width = '100%';
+    iframe.style.height = '500px'; // Adjust as needed
+    iframe.style.border = 'none';
+    contentContainer.appendChild(iframe);
   }
+
+  // Allow link navigation when clicking outside of a link
+  document.addEventListener('click', (event) => {
+    // Check if the clicked element is not a link
+    if (!event.target.closest('.link-container a')) {
+      // Allow default link behavior
+      return true; // If it's not a link, the event is not prevented
+    }
+  });
 });
