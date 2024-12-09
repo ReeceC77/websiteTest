@@ -42,14 +42,24 @@ h1 {
 .image-container img {
   width: 45%;
   max-width: 500px;
-  max-height: 350px; /* Set the maximum height */
-  min-height: 350px; /* Set the minimum height */
-  height: 300px; /* Set the actual height to ensure consistency */
-  object-fit: cover; /* Maintains aspect ratio by scaling down */
-  object-position: center; /* Center the image within the container */
+  max-height: 350px;
+  min-height: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 20px; /* Add space between the images */
+  margin: 0 20px;
+}
+
+/* Semi-transparent container for data */
+#data {
+  background-color: rgba(255, 255, 255, 0.5); /* 50% transparency */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Animation */
@@ -57,33 +67,4 @@ h1 {
   0% { background-position: 0% 25%; }
   50% { background-position: 0% 0%; }
   100% { background-position: 0% 25%; }
-}
-
-/* Styling for weather information */
-#data {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  text-align: left;
-  max-width: 400px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-#data p {
-  margin: 5px 0;
-}
-
-#data p.loading {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-}
-
-#data p.weather-detail {
-  margin-bottom: 10px;
-  font-weight: bold;
 }
