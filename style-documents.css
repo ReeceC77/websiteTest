@@ -32,24 +32,27 @@ h1 {
   margin-bottom: 10px;
 }
 
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
+.link-container {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: inline-block; /* Fit content size */
+  max-width: 80%; /* Prevent it from stretching too much */
+  margin: 20px auto; /* Center the container */
+  text-align: left; /* Align text inside the container */
+  color: #fff; /* Ensure text stands out */
 }
 
-.image-container img {
-  width: 45%;
-  max-width: 500px;
-  max-height: 350px; /* Set the maximum height */
-  min-height: 350px; /* Set the minimum height */
-  height: 300px; /* Set the actual height to ensure consistency */
-  object-fit: cover; /* Maintains aspect ratio by scaling down */
-  object-position: center; /* Center the image within the container */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 20px; /* Add space between the images */
+.link-container a {
+  color: #64ffda; /* Highlighted link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-container a:hover {
+  color: #1de9b6; /* Slightly different color on hover */
+  text-decoration: underline;
 }
 
 /* Animation */
