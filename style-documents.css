@@ -5,7 +5,7 @@ body {
   padding: 0;
   text-align: center;
   background: linear-gradient(to bottom, #4527A0, #26A69A);
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradientAnimation 30s ease infinite;
   animation-play-state: running;
 }
