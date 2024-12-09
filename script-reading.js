@@ -13,17 +13,11 @@ const fetchWeatherData = async () => {
 
     if (weather) {
       const temperature = weather.temperature;
-      const weatherCode = weather.weathercode;
-      const precipitation = weather.precipitation ?? "Data unavailable"; // Fallback if precipitation is undefined
-      const snowfall = weather.snowfall ?? "Data unavailable"; // Fallback if snowfall is undefined
 
-      // Check if these values are properly defined
-      if (precipitation !== "Data unavailable" && snowfall !== "Data unavailable") {
+      // Check if temperature is defined
+      if (temperature !== undefined) {
         dataDiv.innerHTML = `
           <p>Temperature in Cumberland, MD: ${temperature}°C</p>
-          <p>Weather: ${weatherCode}</p>
-          <p>Precipitation: ${precipitation} mm</p>
-          <p>Snowfall: ${snowfall} cm</p>
         `;
       } else {
         dataDiv.innerHTML = "Weather data is incomplete.";
@@ -39,4 +33,4 @@ const fetchWeatherData = async () => {
 
 // Fetch data immediately and then every 5 minutes
 fetchWeatherData();
-setInterval(fetchWeatherData, 300000); // 300000ms = 5 minutes
+setInterval(fetchWeatherData, 30000); // 30000ms = 30 seconds
