@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load the document in an iframe
     const iframe = document.createElement('iframe');
     iframe.src = url;
-    iframe.style.width = '100%';
-    iframe.style.height = '500px'; // Adjust as needed
+    iframe.style.width = '50%';
+    iframe.style.height = '600px'; // Adjust as needed
     iframe.style.border = 'none';
     contentContainer.appendChild(iframe);
   }
