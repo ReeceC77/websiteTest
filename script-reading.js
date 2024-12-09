@@ -11,7 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const data = await response.json();
-      dataDiv.innerHTML = `Temperature in Cumberland, MD: ${data.current_weather.temperature}°C, ${data.current_weather.weathercode}`;
+      dataDiv.innerHTML = `
+        <p>Temperature in Cumberland, MD: ${data.current_weather.temperature}°C</p>
+        <p>Wind: ${data.current_weather.wind_speed} km/h, Direction: ${data.current_weather.wind_direction}</p>
+        <p>Humidity: ${data.current_weather.humidity}%</p>
+        <p>Pressure: ${data.current_weather.pressure} hPa</p>
+        <p>Weather: ${data.current_weather.weathercode}</p>
+      `;
     } catch (err) {
       dataDiv.innerHTML = "Error fetching data.";
       console.error(err);
