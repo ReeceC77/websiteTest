@@ -17,12 +17,17 @@ const fetchWeatherData = async () => {
       const precipitation = weather.precipitation; // Precipitation amount
       const snowfall = weather.snowfall; // Snowfall amount
 
-      dataDiv.innerHTML = `
-        <p>Temperature in Cumberland, MD: ${temperature}°C</p>
-        <p>Weather: ${weatherCode}</p>
-        <p>Precipitation: ${precipitation} mm</p>
-        <p>Snowfall: ${snowfall} cm</p>
-      `;
+      // Check if these values are defined
+      if (precipitation !== undefined && snowfall !== undefined) {
+        dataDiv.innerHTML = `
+          <p>Temperature in Cumberland, MD: ${temperature}°C</p>
+          <p>Weather: ${weatherCode}</p>
+          <p>Precipitation: ${precipitation} mm</p>
+          <p>Snowfall: ${snowfall} cm</p>
+        `;
+      } else {
+        dataDiv.innerHTML = "Weather data is incomplete.";
+      }
     } else {
       dataDiv.innerHTML = "Weather data is not available.";
     }
@@ -34,4 +39,4 @@ const fetchWeatherData = async () => {
 
 // Fetch data immediately and then every 5 minutes
 fetchWeatherData();
-setInterval(fetchWeatherData, 300000); // 300000ms = 5 minutes
+setInterval(fetchWeatherData, 30000); // 30 seconds
