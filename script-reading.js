@@ -1,3 +1,5 @@
+const dataDiv = document.getElementById("data"); // Ensure this element exists in your HTML
+
 const fetchWeatherData = async () => {
   try {
     const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=39.6483&longitude=-78.7602&current_weather=true`);
@@ -16,10 +18,10 @@ const fetchWeatherData = async () => {
       const snowfall = weather.snowfall; // Snowfall amount
 
       dataDiv.innerHTML = `
-        Temperature in Cumberland, MD: ${temperature}°C
-        Weather: ${weatherCode}
-        Precipitation: ${precipitation} mm
-        Snowfall: ${snowfall} cm
+        <p>Temperature in Cumberland, MD: ${temperature}°C</p>
+        <p>Weather: ${weatherCode}</p>
+        <p>Precipitation: ${precipitation} mm</p>
+        <p>Snowfall: ${snowfall} cm</p>
       `;
     } else {
       dataDiv.innerHTML = "Weather data is not available.";
