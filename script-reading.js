@@ -1,4 +1,4 @@
-const dataDiv = document.getElementById("data"); // Ensure this element exists in your HTML
+const dataDiv = document.getElementById("data");
 
 const fetchWeatherData = async () => {
   try {
@@ -14,11 +14,11 @@ const fetchWeatherData = async () => {
     if (weather) {
       const temperature = weather.temperature;
       const weatherCode = weather.weathercode;
-      const precipitation = weather.precipitation; // Precipitation amount
-      const snowfall = weather.snowfall; // Snowfall amount
+      const precipitation = weather.precipitation ?? "Data unavailable"; // Fallback if precipitation is undefined
+      const snowfall = weather.snowfall ?? "Data unavailable"; // Fallback if snowfall is undefined
 
-      // Check if these values are defined
-      if (precipitation !== undefined && snowfall !== undefined) {
+      // Check if these values are properly defined
+      if (precipitation !== "Data unavailable" && snowfall !== "Data unavailable") {
         dataDiv.innerHTML = `
           <p>Temperature in Cumberland, MD: ${temperature}°C</p>
           <p>Weather: ${weatherCode}</p>
@@ -39,4 +39,4 @@ const fetchWeatherData = async () => {
 
 // Fetch data immediately and then every 5 minutes
 fetchWeatherData();
-setInterval(fetchWeatherData, 30000); // 30 seconds
+setInterval(fetchWeatherData, 300000); // 300000ms = 5 minutes
