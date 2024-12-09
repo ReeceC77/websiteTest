@@ -1,14 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const dataDiv = document.getElementById("data");
+  const links = document.querySelectorAll('.link-container a');
+  const contentContainer = document.getElementById('document-content');
 
-  // Example: Fetching real-time weather data
-  fetch("https://api.weatherapi.com/v1/current.json?key=5ab9d4fb56af096ec97723caa6ec9c5a&q=London")
-    .then(response => response.json())
-    .then(data => {
-      dataDiv.innerHTML = `Temperature in ${data.location.name}: ${data.current.temp_c}°C`;
-    })
-    .catch(err => {
-      dataDiv.innerHTML = "Error fetching data.";
-      console.error(err);
+  links.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = link.getAttribute('data-url');
+
+      // Check if the URL is already loaded and visible
+      if (contentContainer.querySelector('iframe')?.getAttribute('src') !== url) {
+        loadDocument(url);
+      }
     });
+  });
+
+  function loadDocument(url) {
+    // Clear the current content
+    contentContainer.innerHTML = '';
+
+    // Load the document in an iframe
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.width = '100%';
+    iframe.style.height = '500px'; // Adjust as needed
+    iframe.style.border = 'none';
+    contentContainer.appendChild(iframe);
+  }
 });
