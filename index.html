@@ -37,8 +37,9 @@
 <!-- Collapsible Information Sections -->
 <div id="info1" class="info-section">
   <img src="images/Raspberry Pi.png" alt="Raspberry Pi Zero 2 W specs" style="width: 500px; max-height: 500px; object-fit: cover; display: block; margin: 0 auto; border-radius: 10px;">
+  <h4>Raspberry Pi Zero 2 W components layout</h4>
   <p>
-    The Raspberry Pi Zero 2 W is a compact and affordable computer with built-in wireless connectivity, suitable for IoT and embedded projects. This project leverages its efficiency for real-time ultrasonic distance measurement.
+    The Raspberry Pi Zero 2 W is a compact and affordable computer with built-in wireless connectivity. This computer only has 512MB of ram, so we had to be careful when programming it not to overload the ram. This computer ended up working perfect for our project and the ram proved not to be an issue. 
   </p>
 </div>
 <div id="info2" class="info-section">
@@ -50,7 +51,8 @@
 <div id="info3" class="info-section">
   <img src="images/US100gif.gif" alt="US100 Ultrasonic Distance Sensor" style="width: 500px; max-height: 500px; object-fit: cover; display: block; margin: 0 auto; border-radius: 10px;">
   <p>
-    This is the US-100 Ultrasonic Distance Sensor. This sensor is capable of reading distance in micro-meters along with being able to read ambient temperature. Ultrasonic soundwaves which are imperceptible by human ears are sent out of the two transmitters that you can see on the front. These soundwaves then bounce off of anything placed within 14.7 feet and return to the sensor where a calculation is made to determine distance. The temperature is likely measured by the resistor on the back of the device. Interestingly, this measurement is necessary as ambient temperature effects the speed of sound at the rate of 17% per degree Kelvin!
+    This is the US-100 Ultrasonic Distance Sensor. This sensor is capable of reading distance in micro-meters along with being able to read ambient temperature. Ultrasonic soundwaves which are imperceptible by human ears are sent out of the two transmitters that you can see on the front. These soundwaves then bounce off of anything placed within 14.7 feet and return to the sensor. Once the soundwaves return, a calculation to determine distance between the sensor and object is made based on how long the sound waves take to return to the sensor. The temperature is likely measured by the resistor on the back of the device. Interestingly, this 
+    measurement is necessary as ambient temperature effects the speed of sound at the rate of 17% per degree Kelvin, which effects the distance calculation.
   </p>
 </div>
   <script src="script-index.js"></script>
